@@ -12,7 +12,6 @@
 // shifteo izq y shifteo der debe ser igual al primer numero calculado.
 // Para retornar lo pedido, el valor del largo de s debe estar shifteado a la izq en 32 bits
 // y la secuencia s se le debe sumar a lo anterior.
-
 unsigned long long dupMasLargo(unsigned long long x) {
     unsigned long long ss;
     unsigned long long s;
