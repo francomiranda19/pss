@@ -22,6 +22,18 @@ test-O-m32:
 	make "CFLAGS=-O -m32 -Wall -pedantic -std=c99" "LDFLAGS=-m32" test-t2
 	./test-t2
 
+test-valgrind:
+	make clean
+	make "CFLAGS=-DVALGRIND -g -Wall -pedantic -std=c99" test-t2
+	bash -c 'valgrind ./test-t2 |& tee test-t2.log'
+	echo
+	echo "Examine el reporte de valgrind en el archivo test-t2.log"
+
+test-valgrind-ddd:
+	make clean
+	make "CFLAGS=-DVALGRIND -g -Wall -pedantic -std=c99" test-t2
+	valgrind --vgdb=yes --vgdb-error=0 ./test-t2
+
 clean:
 	rm -f *.o
 	rm -f test-t2

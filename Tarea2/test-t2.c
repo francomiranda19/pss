@@ -5,9 +5,11 @@
 
 #include "t2.h"
 
+#ifdef VALGRIND
+#define NITER 1
+#else
 #define NITER 5000000
-
-// #define NITER 1
+#endif
 
 // ----------------------------------------------------
 // Funcion que entrega el tiempo transcurrido desde el lanzamiento del
@@ -176,12 +178,14 @@ int main() {
     bench_serie(bench_reduccion);
   int time_reduccion= getTime();
   printf("Tiempo para reduccion: %d\n", time_reduccion);
+
+#ifndef VALGRIND
   if (time_reduccion*90/100<time_reducir) {
     fprintf(stderr, "%s\n",
        "El tiempo de deducir no es el 90% del tiempo de reduccion");
     exit(1);
   }
-
+#endif
 
   printf("Benchmark de la parte b implementada a partir de la parte a\n");
 
@@ -190,11 +194,14 @@ int main() {
     bench_serie(bench_reduccion_trivial);
   int time_reduccion_trivial= getTime();
   printf("Tiempo para reduccion: %d\n", time_reduccion_trivial);
+
+#ifndef VALGRIND
   if (time_reduccion_trivial*90/100<time_reduccion) {
     fprintf(stderr, "%s\n",
        "El tiempo de reduccion no es el 90% del tiempo de reduccion trivial");
     exit(1);
   }
+#endif
 
   printf("Felicitaciones: Aprobo todos los tests\n");
   return 0;
