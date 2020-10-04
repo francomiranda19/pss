@@ -1,0 +1,14 @@
+test-g
+tiempo para reducir: 9514
+tiempo para reduccion: 12170
+tiempo para reduccion a partir de reducir: 14943
+
+test-O
+tiempo para reducir: 6759
+tiempo para reduccion: 10938
+tiempo para reduccion a partir de reducir: 15631
+
+test-0-m32
+tiempo para reducir: 7609
+tiempo para reduccion: 10049
+tiempo para reduccion a partir de reducir: 14766
