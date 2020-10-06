@@ -7,7 +7,7 @@ void reducir(char *s) {
     char *p1 = s;
     char *p2 = s + 1;
 
-    if (*s != 0) {
+    if (*s) {
         while (*p2) {
             if (*p1 != ' ' || *p2 != ' ') {
                 p1++;

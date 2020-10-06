@@ -92,7 +92,9 @@ void bench_reducir(char *s) {
 }
 
 void bench_reduccion(char *s) {
-  char *res= reduccion(s);
+  char a[strlen(s)+1];
+  strcpy(a, s);
+  char *res= reduccion(a);
   free(res);
 }
 
@@ -106,7 +108,9 @@ char *reduccion_trivial(char *s) {
 }
 
 void bench_reduccion_trivial(char *s) {
-  char *res= reduccion_trivial(s);
+  char a[strlen(s)+1];
+  strcpy(a, s);
+  char *res= reduccion_trivial(a);
   free(res);
 }
 
