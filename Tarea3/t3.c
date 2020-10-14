@@ -11,6 +11,6 @@ void desbalancear(Nodo **pa, Nodo **pult) {
 
 }
 
-Nodo *desbalanceado(Nodo *a, Nodo *pult) {
-    
+Nodo *desbalanceado(Nodo *a, Nodo **pult) {
+
 }
