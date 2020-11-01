@@ -55,7 +55,7 @@ static void comparar(Nodo *a, Nodo *b) {
       exit(1);
     }
     comparar(a->izq, b->izq);
-    comparar(b->der, b->der);
+    comparar(a->der, b->der);
   }
 }
 
@@ -117,7 +117,7 @@ static void liberar_des(Nodo *a) {
 static Nodo *copia(Nodo *a) {
   if (a==NULL)
     return NULL;
- 
+
   Nodo *an= malloc(sizeof(Nodo));
   an->id= a->id;
   an->hash= a->hash;
@@ -161,6 +161,49 @@ static Nodo nuref= { 'u', 0, NULL, &nvref };
 static Nodo nsref= { 's', 0, NULL, &nuref };
 
 int main() {
+  printf("Primero se verifica desbalanceado porque es mas facil\n");
+  printf("-----------------------------------------------------\n\n");
+
+  {
+    printf("Verificando el arbol vacio\n");
+    Nodo *a= NULL;
+    Nodo *ult;
+    Nodo *des= desbalanceado(a, &ult);
+    comparar(des, NULL);
+    comparar(ult, NULL);
+  }
+
+  {
+    printf("Verificando arbol de un solo nodo\n");
+    Nodo *a= copia(&nxref);
+    Nodo *ult;
+    Nodo *des= desbalanceado(a, &ult);
+    comparar(des, &nxref);
+    comparar(ult, &nxref);
+    liberar(a); liberar(des);
+  }
+
+  {
+    printf("Verificando arbol con un nodo raiz y un nodo derecho\n");
+    Nodo *a= copia(&nwref);
+    Nodo *ult;
+    Nodo *des= desbalanceado(a, &ult);
+    comparar(des, &nwref);
+    comparar(ult, &nxref);
+    liberar(a); liberar(des);
+  }
+
+  {
+    printf("Verificando arbol con un nodo raiz y u nodo izquierdo\n");
+    Nodo *a= copia(&nx);
+    Nodo *ult;
+    Nodo *des= desbalanceado(a, &ult);
+    comparar(des, &nwref);
+    comparar(ult, &nxref);
+    liberar(a); liberar(des);
+    
+  }
+
   {
     printf("Verificando ejemplo del enunciado\n");
     Nodo *a= copia(&nv);
@@ -168,19 +211,68 @@ int main() {
     Nodo *des= desbalanceado(a, &ult);
     comparar(des, &nsref);
     comparar(ult, &nxref);
-    liberar(des);
     comparar(a, &nv);
+    liberar(a); liberar(des);
+  }
 
+  printf("\nAhora se verifica desbalancear\n");
+  printf(  "------------------------------\n\n");
+
+  {
+    printf("Verificando el arbol vacio\n");
+    Nodo *a= NULL;
+    Nodo *ult;
+    desbalancear(&a, &ult);
+    comparar(a, NULL);
+    comparar(ult, NULL);
+  }
+
+  {
+    printf("Verificando arbol de un solo nodo\n");
+    Nodo *a= copia(&nxref);
+    Nodo *ult;
+    desbalancear(&a, &ult);
+    comparar(a, &nxref);
+    comparar(ult, &nxref);
+    liberar(a);
+  }
+
+  {
+    printf("Verificando arbol con un nodo raiz y un nodo derecho\n");
+    Nodo *a= copia(&nwref);
+    Nodo *ult;
+    desbalancear(&a, &ult);
+    comparar(a, &nwref);
+    comparar(ult, &nxref);
+    liberar(a);
+  }
+
+  {
+    printf("Verificando arbol con un nodo raiz y u nodo izquierdo\n");
+    Nodo *a= copia(&nx);
+    Nodo *ult;
+    desbalancear(&a, &ult);
+    comparar(a, &nwref);
+    comparar(ult, &nxref);
+    liberar(a);
+  }
+
+  {
+    printf("Verificando ejemplo del enunciado\n");
+    Nodo *a= copia(&nv);
+    Nodo *ult;
     desbalancear(&a, &ult);
     comparar(a, &nsref);
     comparar(ult, &nxref);
     liberar(a);
-    printf("Aprobado\n");
   }
+
+  printf("\nTests aprobados\n\n");
 
   {
     int n= 100000;
     printf("Verificando un arbol de 100 mil nodos\n");
+    printf("-------------------------------------\n\n");
     Nodo *a= equilibrado(1, n);
     Nodo *ref= copia(a);
     Nodo *ult;
@@ -225,12 +317,11 @@ int main() {
   for (int i= 0; i<MEDS; i++) {
     int n= ((i+1)*N)/MEDS;
     a= equilibrado(1, n);
-
     resetTime();
     des= desbalanceado(a, &ult);
     tiempos_desbalanceado[i]= getTime();
-    printf("Tiempo de desbalanceado de %d miles de nodos: %lld usegs.\n",
-           n/1000, tiempos_desbalanceado[i]);
+    printf("Tiempo de desbalanceado de %d miles de nodos: %lld usegs.\n", 
+          n/1000, tiempos_desbalanceado[i]);
 
     verificar_des(des, n, ult);
     liberar_des(des);
@@ -239,7 +330,7 @@ int main() {
     desbalancear(&a, &ult);
     tiempos_desbalancear[i]= getTime();
     printf("Tiempo de desbalancear %d miles de nodos: %lld usegs.\n",
-           n/1000, tiempos_desbalancear[i]);
+          n/1000, tiempos_desbalancear[i]);
 
     verificar_des(a, n, ult);
     Nodo *b= a;
@@ -275,4 +366,3 @@ int main() {
   printf("Felicitaciones paso todos los tests\n");
   return 0;
 }
-
