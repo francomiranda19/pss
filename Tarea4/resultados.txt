@@ -1,0 +1,147 @@
+make test-g:
+# Archivo de entrada
+$ cat dicc.txt
+123456789:123456789
+perro:guau         
+gato:miau          
+                   
+vaca:muuu          
+                   
+lobo:auuu          
+                   
+$ ./compactar dicc.txt
+# Archivo de salida
+$ cat dicc.txt
+123456789:123456789
+perro:guau         
+gato:miau          
+vaca:muuu          
+lobo:auuu          
+                   
+                   
+                   
+# Felicitaciones: test aprobado
+./verificar compactar dicc2-orig.txt dicc2.txt dicc2-out.txt
+# Archivo de entrada
+$ cat dicc2.txt
+                   
+                   
+                   
+123456789:123456789
+perro:guau         
+                   
+gato:miau          
+vaca:muuu          
+                   
+lobo:auuu          
+                   
+pollo:pio pio      
+                   
+                   
+oveja:beeeee       
+pato:cuac cuac     
+$ ./compactar dicc2.txt
+# Archivo de salida
+$ cat dicc2.txt
+123456789:123456789
+perro:guau         
+gato:miau          
+vaca:muuu          
+lobo:auuu          
+pollo:pio pio      
+oveja:beeeee       
+pato:cuac cuac     
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+# Felicitaciones: test aprobado
+
+make test-O:
+# Archivo de entrada
+$ cat dicc.txt
+                   
+                   
+                   
+123456789:123456789
+perro:guau         
+                   
+gato:miau          
+vaca:muuu          
+                   
+lobo:auuu          
+                   
+pollo:pio pio      
+                   
+                   
+oveja:beeeee       
+pato:cuac cuac     
+$ ./compactar dicc.txt
+# Archivo de salida
+$ cat dicc.txt
+123456789:123456789
+perro:guau         
+gato:miau          
+vaca:muuu          
+lobo:auuu          
+pollo:pio pio      
+oveja:beeeee       
+pato:cuac cuac     
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+# Felicitaciones: test aprobado
+
+make test-O-m32:
+# Archivo de entrada
+$ cat dicc.txt
+123456789:123456789
+perro:guau         
+gato:miau          
+                   
+vaca:muuu          
+                   
+lobo:auuu          
+                   
+$ ./compactar dicc.txt
+# Archivo de salida
+$ cat dicc.txt
+123456789:123456789
+perro:guau         
+gato:miau          
+vaca:muuu          
+lobo:auuu          
+                   
+                   
+                   
+# Felicitaciones: test aprobado
+
+make test-valgrind:
+==15907== Memcheck, a memory error detector
+==15907== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==15907== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==15907== Command: ./compactar dicc2.txt
+==15907== 
+==15907== 
+==15907== HEAP SUMMARY:
+==15907==     in use at exit: 0 bytes in 0 blocks
+==15907==   total heap usage: 3 allocs, 3 frees, 4,669 bytes allocated
+==15907== 
+==15907== All heap blocks were freed -- no leaks are possible
+==15907== 
+==15907== For counts of detected and suppressed errors, rerun with: -v
+==15907== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cmp dicc2.txt dicc2-out.txt
+echo
+
+echo "Examine el reporte de valgrind en el archivo run.log"
+Examine el reporte de valgrind en el archivo run.log
