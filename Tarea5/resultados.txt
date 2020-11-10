@@ -1,0 +1,221 @@
+make test-g:
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+llenarMaletaSec n=5 k=8000000 best=460.000000 sel=3
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+llenarMaletaSec n=32 k=100000 best=473.000000 sel=23
+k= 100000  numero de articulos seleccionados= 23  valor= 473
+Calculando secuencialmente con k= 10000000 combinaciones
+llenarMaletaSec n=32 k=10000000 best=493.500000 sel=23
+Tiempo= 10436, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+llenarMaletaSec n=32 k=1250000 best=502.600000 sel=24
+llenarMaletaSec n=32 k=1250000 best=487.400000 sel=23
+llenarMaletaSec n=32 k=1250000 best=493.500000 sel=23
+llenarMaletaSec n=32 k=1250000 best=489.100000 sel=23
+llenarMaletaSec n=32 k=1250000 best=493.500000 sel=23
+llenarMaletaSec n=32 k=1250000 best=484.200000 sel=23
+llenarMaletaSec n=32 k=1250000 best=489.100000 sel=23
+llenarMaletaSec n=32 k=1250000 best=490.400000 sel=23
+Tiempo= 3932  speedup= 2.65412  numero de articulos seleccionados= 24  valor= 502.6
+Test 2 aprobado: speedup >= 1.7x
+
+Felicitaciones: su tarea funciona
+
+
+
+
+make test-O:
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+llenarMaletaSec n=5 k=8000000 best=460.000000 sel=3
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+llenarMaletaSec n=32 k=100000 best=463.500000 sel=22
+k= 100000  numero de articulos seleccionados= 22  valor= 463.5
+Calculando secuencialmente con k= 10000000 combinaciones
+llenarMaletaSec n=32 k=10000000 best=502.600000 sel=24
+Tiempo= 4695, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+llenarMaletaSec n=32 k=1250000 best=490.400000 sel=23
+llenarMaletaSec n=32 k=1250000 best=484.300000 sel=23
+llenarMaletaSec n=32 k=1250000 best=502.600000 sel=24
+llenarMaletaSec n=32 k=1250000 best=487.900000 sel=23
+llenarMaletaSec n=32 k=1250000 best=490.800000 sel=23
+llenarMaletaSec n=32 k=1250000 best=490.400000 sel=23
+llenarMaletaSec n=32 k=1250000 best=487.900000 sel=23
+llenarMaletaSec n=32 k=1250000 best=488.700000 sel=23
+Tiempo= 1669  speedup= 2.81306  numero de articulos seleccionados= 24  valor= 502.6
+Test 2 aprobado: speedup >= 1.7x
+
+Felicitaciones: su tarea funciona
+
+
+
+
+make test-O-m32:
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+llenarMaletaSec n=5 k=8000000 best=460.000000 sel=3
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=1000000 best=460.000000 sel=3
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+llenarMaletaSec n=32 k=100000 best=481.200000 sel=23
+k= 100000  numero de articulos seleccionados= 23  valor= 481.2
+Calculando secuencialmente con k= 10000000 combinaciones
+llenarMaletaSec n=32 k=10000000 best=493.500000 sel=23
+Tiempo= 5716, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+llenarMaletaSec n=32 k=1250000 best=482.500000 sel=23
+llenarMaletaSec n=32 k=1250000 best=502.600000 sel=24
+llenarMaletaSec n=32 k=1250000 best=487.400000 sel=23
+llenarMaletaSec n=32 k=1250000 best=483.200000 sel=23
+llenarMaletaSec n=32 k=1250000 best=483.200000 sel=23
+llenarMaletaSec n=32 k=1250000 best=489.200000 sel=23
+llenarMaletaSec n=32 k=1250000 best=492.300000 sel=23
+llenarMaletaSec n=32 k=1250000 best=487.500000 sel=23
+Tiempo= 2046  speedup= 2.79374  numero de articulos seleccionados= 24  valor= 502.6
+Test 2 aprobado: speedup >= 1.7x
+
+Felicitaciones: su tarea funciona
+
+
+
+
+make test-valgrind:
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+llenarMaletaSec n=5 k=800000 best=460.000000 sel=3
+k= 800000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+llenarMaletaSec n=5 k=100000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=100000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=100000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=100000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=100000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=100000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=100000 best=460.000000 sel=3
+llenarMaletaSec n=5 k=100000 best=460.000000 sel=3
+k= 800000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+llenarMaletaSec n=32 k=10000 best=456.200000 sel=22
+k= 10000  numero de articulos seleccionados= 22  valor= 456.2
+Calculando secuencialmente con k= 1000000 combinaciones
+llenarMaletaSec n=32 k=1000000 best=490.400000 sel=23
+Tiempo= 25491, numero de articulos seleccionados= 23  valor= 490.4
+
+-----
+Calculando en paralelo con k= 1000000 combinaciones, intento 1
+llenarMaletaSec n=32 k=125000 best=478.500000 sel=23
+llenarMaletaSec n=32 k=125000 best=480.100000 sel=23
+llenarMaletaSec n=32 k=125000 best=483.100000 sel=23
+llenarMaletaSec n=32 k=125000 best=480.000000 sel=23
+llenarMaletaSec n=32 k=125000 best=490.800000 sel=23
+llenarMaletaSec n=32 k=125000 best=477.300000 sel=23
+llenarMaletaSec n=32 k=125000 best=479.000000 sel=23
+llenarMaletaSec n=32 k=125000 best=478.000000 sel=23
+Tiempo= 25705  speedup= 0.991675  numero de articulos seleccionados= 23  valor= 490.8
+
+-----
+Calculando en paralelo con k= 1000000 combinaciones, intento 2
+llenarMaletaSec n=32 k=125000 best=482.700000 sel=23
+llenarMaletaSec n=32 k=125000 best=473.200000 sel=23
+llenarMaletaSec n=32 k=125000 best=477.200000 sel=23
+llenarMaletaSec n=32 k=125000 best=483.200000 sel=23
+llenarMaletaSec n=32 k=125000 best=479.700000 sel=23
+llenarMaletaSec n=32 k=125000 best=479.200000 sel=23
+llenarMaletaSec n=32 k=125000 best=471.800000 sel=23
+llenarMaletaSec n=32 k=125000 best=473.300000 sel=23
+Tiempo= 25556  speedup= 0.997457  numero de articulos seleccionados= 23  valor= 483.2
+
+-----
+Calculando en paralelo con k= 1000000 combinaciones, intento 3
+llenarMaletaSec n=32 k=125000 best=489.300000 sel=23
+llenarMaletaSec n=32 k=125000 best=478.500000 sel=23
+llenarMaletaSec n=32 k=125000 best=477.400000 sel=23
+llenarMaletaSec n=32 k=125000 best=484.900000 sel=23
+llenarMaletaSec n=32 k=125000 best=481.600000 sel=23
+llenarMaletaSec n=32 k=125000 best=474.400000 sel=23
+llenarMaletaSec n=32 k=125000 best=476.000000 sel=23
+llenarMaletaSec n=32 k=125000 best=477.400000 sel=23
+Tiempo= 25463  speedup= 1.0011  numero de articulos seleccionados= 23  valor= 489.3
+
+-----
+Calculando en paralelo con k= 1000000 combinaciones, intento 4
+llenarMaletaSec n=32 k=125000 best=483.100000 sel=23
+llenarMaletaSec n=32 k=125000 best=475.100000 sel=23
+llenarMaletaSec n=32 k=125000 best=471.700000 sel=23
+llenarMaletaSec n=32 k=125000 best=478.100000 sel=23
+llenarMaletaSec n=32 k=125000 best=485.300000 sel=23
+llenarMaletaSec n=32 k=125000 best=472.200000 sel=23
+llenarMaletaSec n=32 k=125000 best=473.200000 sel=23
+llenarMaletaSec n=32 k=125000 best=461.200000 sel=22
+Tiempo= 26363  speedup= 0.966923  numero de articulos seleccionados= 23  valor= 485.3
+Despues de 4 intentos no obtuvo un speedup de 1.7x
+Revise la paralelizacion.
+==1424== 
+==1424== HEAP SUMMARY:
+==1424==     in use at exit: 0 bytes in 0 blocks
+==1424==   total heap usage: 108 allocs, 108 frees, 716,836 bytes allocated
+==1424== 
+==1424== All heap blocks were freed -- no leaks are possible
+==1424== 
+==1424== For counts of detected and suppressed errors, rerun with: -v
+==1424== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+make: *** [Makefile:34: test-valgrind] Error 1
