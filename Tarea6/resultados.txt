@@ -6,8 +6,8 @@ Thread 0 solicita recurso
 
 <<< Thread principal desocupa el recurso >>>
 
-Thread 0 obtiene recurso
 Thread 1 solicita recurso
+Thread 0 obtiene recurso
 Thread 1 obtiene recurso
 Bien.  Se respeto orden de llegada.
 
@@ -185,8 +185,8 @@ Thread 0 solicita recurso
 
 <<< Thread principal desocupa el recurso >>>
 
-Thread 0 obtiene recurso
 Thread 1 solicita recurso
+Thread 0 obtiene recurso
 Thread 1 obtiene recurso
 Bien.  Se respeto orden de llegada.
 
@@ -223,6 +223,7 @@ Thread 8 solicita recurso
 
 <<< Thread principal desocupa el recurso >>>
 
+Thread 9 solicita recurso
 Thread 0 obtiene recurso
 Thread 1 obtiene recurso
 Thread 2 obtiene recurso
@@ -232,7 +233,6 @@ Thread 5 obtiene recurso
 Thread 6 obtiene recurso
 Thread 7 obtiene recurso
 Thread 8 obtiene recurso
-Thread 9 solicita recurso
 Thread 9 obtiene recurso
 Bien.  Se respeto orden de llegada.
 
@@ -319,8 +319,8 @@ Thread 28 solicita recurso
 
 <<< Thread principal desocupa el recurso >>>
 
-Thread 0 obtiene recurso
 Thread 29 solicita recurso
+Thread 0 obtiene recurso
 Thread 1 obtiene recurso
 Thread 2 obtiene recurso
 Thread 3 obtiene recurso
@@ -379,9 +379,9 @@ Thread 3 solicita recurso
 
 <<< Thread principal desocupa el recurso >>>
 
+Thread 4 solicita recurso
 Thread 0 obtiene recurso
 Thread 1 obtiene recurso
-Thread 4 solicita recurso
 Thread 2 obtiene recurso
 Thread 3 obtiene recurso
 Thread 4 obtiene recurso
@@ -555,10 +555,10 @@ Thread 0 solicita recurso
 Thread 1 solicita recurso
 Thread 2 solicita recurso
 Thread 3 solicita recurso
-Thread 4 solicita recurso
 
 <<< Thread principal desocupa el recurso >>>
 
+Thread 4 solicita recurso
 Thread 0 obtiene recurso
 Thread 1 obtiene recurso
 Thread 2 obtiene recurso
@@ -616,12 +616,12 @@ Thread 15 solicita recurso
 Thread 16 solicita recurso
 Thread 17 solicita recurso
 Thread 18 solicita recurso
+Thread 19 solicita recurso
 
 <<< Thread principal desocupa el recurso >>>
 
 Thread 0 obtiene recurso
 Thread 1 obtiene recurso
-Thread 19 solicita recurso
 Thread 2 obtiene recurso
 Thread 3 obtiene recurso
 Thread 4 obtiene recurso
@@ -674,10 +674,10 @@ Thread 25 solicita recurso
 Thread 26 solicita recurso
 Thread 27 solicita recurso
 Thread 28 solicita recurso
+Thread 29 solicita recurso
 
 <<< Thread principal desocupa el recurso >>>
 
-Thread 29 solicita recurso
 Thread 0 obtiene recurso
 Thread 1 obtiene recurso
 Thread 2 obtiene recurso
