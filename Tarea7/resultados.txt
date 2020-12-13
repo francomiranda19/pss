@@ -1,0 +1,411 @@
+make test-g:
+Test 1: ejemplo con solo 6 ciudades
+Calculando secuencialmente
+Resultados viajante: nperm=8000000 min=2.175692 primer_rand=1806224600
+0 1 2 4 5 3 0
+Calculando en paralelo
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=1552004103
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=1175343718
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=882233098
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=3538670325
+0 1 2 4 5 3 0
+Resultado final: nperm=8000000 distancia minima=2.175692
+0 1 2 4 5 3 0
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Un ejemplo grande con 33 ciudades
+Precalentando secuencialmente
+Resultados viajante: nperm=100000 min=11.905195 primer_rand=3171603433
+0 15 6 23 8 13 14 16 18 1 12 20 31 30 4 29 2 5 32 10 7 24 22 21 3 26 9 25 11 17 27 28 19 0
+Calculando secuencialmente con k= 10000000 permutaciones
+Resultados viajante: nperm=10000000 min=10.430751 primer_rand=585655435
+0 5 23 28 25 11 17 19 29 2 12 32 10 8 27 3 13 4 15 26 22 24 6 21 14 30 18 31 7 20 16 1 9 0
+Tiempo=12542
+
+-----
+Calculando en paralelo con k= 10000000 permutaciones, intento 1
+Resultados viajante: nperm=1250000 min=10.798656 primer_rand=1434517468
+0 4 15 26 29 3 21 2 8 12 25 27 7 18 31 5 14 13 20 22 1 24 6 23 28 17 11 32 10 30 19 16 9 0
+Resultados viajante: nperm=1250000 min=10.899571 primer_rand=620072809
+0 27 5 14 2 4 13 1 9 6 17 25 19 11 24 23 31 32 10 29 12 30 21 15 28 8 7 22 26 20 3 18 16 0
+Resultados viajante: nperm=1250000 min=10.800877 primer_rand=921827429
+0 22 21 13 20 2 8 14 15 17 5 31 16 7 18 29 4 26 6 9 28 23 1 3 11 12 32 30 25 27 10 19 24 0
+Resultados viajante: nperm=1250000 min=10.553377 primer_rand=2612593740
+0 15 6 9 16 7 13 4 29 18 22 20 19 2 14 12 8 30 10 32 31 3 21 26 25 24 11 23 5 27 28 17 1 0
+Resultados viajante: nperm=1250000 min=10.520605 primer_rand=1875132386
+0 7 2 4 29 8 26 30 31 27 5 24 28 10 32 12 23 11 25 17 1 19 18 16 20 3 22 13 14 6 9 21 15 0
+Resultados viajante: nperm=1250000 min=10.978105 primer_rand=927797456
+0 5 23 20 32 30 12 31 25 27 10 8 28 24 9 21 11 16 1 22 15 2 29 4 14 6 7 18 19 17 3 26 13 0
+Resultados viajante: nperm=1250000 min=10.655077 primer_rand=330672961
+0 26 15 19 5 10 32 18 16 7 8 12 30 21 9 23 28 14 3 17 24 13 20 2 29 4 11 25 27 31 22 1 6 0
+Resultados viajante: nperm=1250000 min=10.650661 primer_rand=284353194
+0 9 7 8 25 16 13 31 6 22 18 4 15 29 20 21 1 3 26 14 2 28 24 11 23 5 10 32 30 12 27 17 19 0
+Resultado final: Tiempo=4756 speedup=2.637090 distancia minima=10.520605
+0 7 2 4 29 8 26 30 31 27 5 24 28 10 32 12 23 11 25 17 1 19 18 16 20 3 22 13 14 6 9 21 15 0
+Test 2 aprobado: speedup >= 1.7x
+
+Felicitaciones: su tarea funciona
+
+
+
+make test-O:
+Test 1: ejemplo con solo 6 ciudades
+Calculando secuencialmente
+Resultados viajante: nperm=8000000 min=2.175692 primer_rand=1806224600
+0 1 2 4 5 3 0
+Calculando en paralelo
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=882233098
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=1552004103
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=3538670325
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=1175343718
+0 1 2 4 5 3 0
+Resultado final: nperm=8000000 distancia minima=2.175692
+0 1 2 4 5 3 0
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Un ejemplo grande con 33 ciudades
+Precalentando secuencialmente
+Resultados viajante: nperm=100000 min=11.905195 primer_rand=3171603433
+0 15 6 23 8 13 14 16 18 1 12 20 31 30 4 29 2 5 32 10 7 24 22 21 3 26 9 25 11 17 27 28 19 0
+Calculando secuencialmente con k= 10000000 permutaciones
+Resultados viajante: nperm=10000000 min=10.430751 primer_rand=585655435
+0 5 23 28 25 11 17 19 29 2 12 32 10 8 27 3 13 4 15 26 22 24 6 21 14 30 18 31 7 20 16 1 9 0
+Tiempo=3465
+
+-----
+Calculando en paralelo con k= 10000000 permutaciones, intento 1
+Resultados viajante: nperm=1250000 min=10.800877 primer_rand=921827429
+Resultados viajante: nperm=1250000 min=10.655077 primer_rand=330672961
+0 26 15 19 5 10 32 18 16 7 8 12 30 21 9 23 28 14 3 17 24 13 20 2 29 4 11 25 27 31 22 1 6 0
+Resultados viajante: nperm=1250000 min=10.978105 primer_rand=927797456
+0 5 23 20 32 30 12 31 25 27 10 8 28 24 9 21 11 16 1 22 15 2 29 4 14 6 7 18 19 17 3 26 13 0
+0 22 21 13 20 2 8 14 15 17 5 31 16 7 18 29 4 26 6 9 28 23 1 3 11 12 32 30 25 27 10 19 24 0
+Resultados viajante: nperm=1250000 min=10.650661 primer_rand=284353194
+0 9 7 8 25 16 13 31 6 22 18 4 15 29 20 21 1 3 26 14 2 28 24 11 23 5 10 32 30 12 27 17 19 0
+Resultados viajante: nperm=1250000 min=10.798656 primer_rand=1434517468
+Resultados viajante: nperm=1250000 min=10.899571 primer_rand=620072809
+0 27 5 14 2 4 13 1 9 6 17 25 19 11 24 23 31 32 10 29 12 30 21 15 28 8 7 22 26 20 3 18 16 0
+0 4 15 26 29 3 21 2 8 12 25 27 7 18 31 5 14 13 20 22 1 24 6 23 28 17 11 32 10 30 19 16 9 0
+Resultados viajante: nperm=1250000 min=10.520605 primer_rand=1875132386
+0 7 2 4 29 8 26 30 31 27 5 24 28 10 32 12 23 11 25 17 1 19 18 16 20 3 22 13 14 6 9 21 15 0
+Resultados viajante: nperm=1250000 min=10.553377 primer_rand=2612593740
+0 15 6 9 16 7 13 4 29 18 22 20 19 2 14 12 8 30 10 32 31 3 21 26 25 24 11 23 5 27 28 17 1 0
+Resultado final: Tiempo=1482 speedup=2.338057 distancia minima=10.520605
+0 7 2 4 29 8 26 30 31 27 5 24 28 10 32 12 23 11 25 17 1 19 18 16 20 3 22 13 14 6 9 21 15 0
+Test 2 aprobado: speedup >= 1.7x
+
+Felicitaciones: su tarea funciona
+
+
+
+make test-O-m32:
+Test 1: ejemplo con solo 6 ciudades
+Calculando secuencialmente
+Resultados viajante: nperm=8000000 min=2.175692 primer_rand=1806224600
+0 1 2 4 5 3 0
+Calculando en paralelo
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=882233098
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=1552004103
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=1175343718
+0 1 2 4 5 3 0
+Resultados viajante: nperm=2000000 min=2.175692 primer_rand=3538670325
+0 1 2 4 5 3 0
+Resultado final: nperm=8000000 distancia minima=2.175692
+0 1 2 4 5 3 0
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Un ejemplo grande con 33 ciudades
+Precalentando secuencialmente
+Resultados viajante: nperm=100000 min=11.905195 primer_rand=3171603433
+0 15 6 23 8 13 14 16 18 1 12 20 31 30 4 29 2 5 32 10 7 24 22 21 3 26 9 25 11 17 27 28 19 0
+Calculando secuencialmente con k= 10000000 permutaciones
+Resultados viajante: nperm=10000000 min=10.430751 primer_rand=585655435
+0 5 23 28 25 11 17 19 29 2 12 32 10 8 27 3 13 4 15 26 22 24 6 21 14 30 18 31 7 20 16 1 9 0
+Tiempo=4668
+
+-----
+Calculando en paralelo con k= 10000000 permutaciones, intento 1
+Resultados viajante: nperm=1250000 min=10.899571 primer_rand=620072809
+Resultados viajante: nperm=1250000 min=10.798656 primer_rand=1434517468
+0 4 15 26 29 3 21 2 8 12 25 27 7 18 31 5 14 13 20 22 1 24 6 23 28 17 11 32 10 30 19 16 9 0
+0 27 5 14 2 4 13 1 9 6 17 25 19 11 24 23 31 32 10 29 12 30 21 15 28 8 7 22 26 20 3 18 16 0
+Resultados viajante: nperm=1250000 min=10.553377 primer_rand=2612593740
+0 15 6 9 16 7 13 4 29 18 22 20 19 2 14 12 8 30 10 32 31 3 21 26 25 24 11 23 5 27 28 17 1 0
+Resultados viajante: nperm=1250000 min=10.800877 primer_rand=921827429
+0 22 21 13 20 2 8 14 15 17 5 31 16 7 18 29 4 26 6 9 28 23 1 3 11 12 32 30 25 27 10 19 24 0
+Resultados viajante: nperm=1250000 min=10.650661 primer_rand=284353194
+0 9 7 8 25 16 13 31 6 22 18 4 15 29 20 21 1 3 26 14 2 28 24 11 23 5 10 32 30 12 27 17 19 0
+Resultados viajante: nperm=1250000 min=10.655077 primer_rand=330672961
+0 26 15 19 5 10 32 18 16 7 8 12 30 21 9 23 28 14 3 17 24 13 20 2 29 4 11 25 27 31 22 1 6 0
+Resultados viajante: nperm=1250000 min=10.978105 primer_rand=927797456
+0 5 23 20 32 30 12 31 25 27 10 8 28 24 9 21 11 16 1 22 15 2 29 4 14 6 7 18 19 17 3 26 13 0
+Resultados viajante: nperm=1250000 min=10.520605 primer_rand=1875132386
+0 7 2 4 29 8 26 30 31 27 5 24 28 10 32 12 23 11 25 17 1 19 18 16 20 3 22 13 14 6 9 21 15 0
+Resultado final: Tiempo=2100 speedup=2.222857 distancia minima=10.520605
+0 7 2 4 29 8 26 30 31 27 5 24 28 10 32 12 23 11 25 17 1 19 18 16 20 3 22 13 14 6 9 21 15 0
+Test 2 aprobado: speedup >= 1.7x
+
+Felicitaciones: su tarea funciona
+
+
+
+make test-valgrind:
+==10604== Memcheck, a memory error detector
+==10604== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10604== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==10604== Command: ./test-t7
+==10604== 
+Test 1: ejemplo con solo 6 ciudades
+Calculando secuencialmente
+Resultados viajante: nperm=800000 min=2.175692 primer_rand=1806224600
+0 1 2 4 5 3 0
+Calculando en paralelo
+Resultados viajante: nperm=200000 min=2.175692 primer_rand=1552004103
+0 1 2 4 5 3 0
+Resultados viajante: nperm=200000 min=2.175692 primer_rand=882233098
+0 1 2 4 5 3 0
+Resultados viajante: nperm=200000 min=2.175692 primer_rand=3538670325
+0 1 2 4 5 3 0
+Resultados viajante: nperm=200000 min=2.175692 primer_rand=1175343718
+0 1 2 4 5 3 0
+==10612== 
+==10612== HEAP SUMMARY:
+==10612==     in use at exit: 336 bytes in 7 blocks
+==10612==   total heap usage: 8 allocs, 1 frees, 1,360 bytes allocated
+==10612== 
+==10612== LEAK SUMMARY:
+==10612==    definitely lost: 0 bytes in 0 blocks
+==10612==    indirectly lost: 0 bytes in 0 blocks
+==10612==      possibly lost: 0 bytes in 0 blocks
+==10612==    still reachable: 336 bytes in 7 blocks
+==10612==         suppressed: 0 bytes in 0 blocks
+==10612== Rerun with --leak-check=full to see details of leaked memory
+==10612== 
+==10612== For counts of detected and suppressed errors, rerun with: -v
+==10612== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==10611== 
+==10611== HEAP SUMMARY:
+==10611==     in use at exit: 336 bytes in 7 blocks
+==10611==   total heap usage: 8 allocs, 1 frees, 1,360 bytes allocated
+==10611== 
+==10611== LEAK SUMMARY:
+==10611==    definitely lost: 0 bytes in 0 blocks
+==10611==    indirectly lost: 0 bytes in 0 blocks
+==10611==      possibly lost: 0 bytes in 0 blocks
+==10611==    still reachable: 336 bytes in 7 blocks
+==10611==         suppressed: 0 bytes in 0 blocks
+==10611== Rerun with --leak-check=full to see details of leaked memory
+==10611== 
+==10611== For counts of detected and suppressed errors, rerun with: -v
+==10611== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==10613== 
+==10613== HEAP SUMMARY:
+==10613==     in use at exit: 336 bytes in 7 blocks
+==10613==   total heap usage: 8 allocs, 1 frees, 1,360 bytes allocated
+==10613== 
+==10613== LEAK SUMMARY:
+==10613==    definitely lost: 0 bytes in 0 blocks
+==10613==    indirectly lost: 0 bytes in 0 blocks
+==10613==      possibly lost: 0 bytes in 0 blocks
+==10613==    still reachable: 336 bytes in 7 blocks
+==10613==         suppressed: 0 bytes in 0 blocks
+==10613== Rerun with --leak-check=full to see details of leaked memory
+==10613== 
+==10613== For counts of detected and suppressed errors, rerun with: -v
+==10613== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==10614== 
+==10614== HEAP SUMMARY:
+==10614==     in use at exit: 336 bytes in 7 blocks
+==10614==   total heap usage: 8 allocs, 1 frees, 1,360 bytes allocated
+==10614== 
+==10614== LEAK SUMMARY:
+==10614==    definitely lost: 0 bytes in 0 blocks
+==10614==    indirectly lost: 0 bytes in 0 blocks
+==10614==      possibly lost: 0 bytes in 0 blocks
+==10614==    still reachable: 336 bytes in 7 blocks
+==10614==         suppressed: 0 bytes in 0 blocks
+==10614== Rerun with --leak-check=full to see details of leaked memory
+==10614== 
+==10614== For counts of detected and suppressed errors, rerun with: -v
+==10614== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Resultado final: nperm=800000 distancia minima=2.175692
+0 1 2 4 5 3 0
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Un ejemplo grande con 33 ciudades
+Precalentando secuencialmente
+Resultados viajante: nperm=10000 min=12.024182 primer_rand=3171603433
+0 29 3 24 5 19 13 12 2 18 7 26 21 22 6 10 32 30 8 20 15 4 14 1 9 25 27 16 11 31 23 28 17 0
+Calculando secuencialmente con k= 1000000 permutaciones
+Resultados viajante: nperm=1000000 min=10.919340 primer_rand=1290271415
+0 16 26 5 10 32 27 11 25 9 23 28 12 7 24 17 19 31 13 29 4 2 15 18 21 6 1 8 30 20 14 22 3 0
+Tiempo=17461
+
+-----
+Calculando en paralelo con k= 1000000 permutaciones, intento 1
+Resultados viajante: nperm=125000 min=11.520278 primer_rand=330672961
+0 11 5 24 9 17 21 29 4 15 16 13 3 22 18 23 28 1 6 19 20 2 27 8 31 14 30 12 10 32 25 7 26 0
+Resultados viajante: nperm=125000 min=11.755183 primer_rand=1875132386
+0 31 19 24 11 28 10 32 12 16 27 7 29 25 6 9 23 5 3 4 30 8 21 18 13 15 2 20 14 26 22 17 1 0
+Resultados viajante: nperm=125000 min=11.870661 primer_rand=2612593740
+0 9 8 25 6 21 4 2 12 27 3 20 22 18 14 29 30 10 32 31 5 23 1 15 28 19 24 11 7 13 17 16 26 0
+==10648== 
+==10648== HEAP SUMMARY:
+==10648==     in use at exit: 8,976 bytes in 34 blocks
+==10648==   total heap usage: 42 allocs, 8 frees, 10,336 bytes allocated
+==10648== 
+==10648== LEAK SUMMARY:
+==10648==    definitely lost: 0 bytes in 0 blocks
+==10648==    indirectly lost: 0 bytes in 0 blocks
+==10648==      possibly lost: 0 bytes in 0 blocks
+==10648==    still reachable: 8,976 bytes in 34 blocks
+==10648==         suppressed: 0 bytes in 0 blocks
+==10648== Rerun with --leak-check=full to see details of leaked memory
+==10648== 
+==10648== For counts of detected and suppressed errors, rerun with: -v
+==10648== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Resultados viajante: nperm=125000 min=10.650661 primer_rand=284353194
+Resultados viajante: nperm=125000 min=11.597700 primer_rand=1434517468
+0 29 4 22 18 7 10 30 24 2 14 17 25 31 12 28 23 6 1 20 13 32 8 16 21 15 26 3 9 27 5 19 11 0
+==10642== 
+==10642== HEAP SUMMARY:
+==10642==     in use at exit: 8,976 bytes in 34 blocks
+==10642==   total heap usage: 42 allocs, 8 frees, 10,336 bytes allocated
+==10642== 
+0 9 7 8 25 16 13 31 6 22 18 4 15 29 20 21 1 3 26 14 2 28 24 11 23 5 10 32 30 12 27 17 19 0
+==10642== LEAK SUMMARY:
+==10642==    definitely lost: 0 bytes in 0 blocks
+==10642==    indirectly lost: 0 bytes in 0 blocks
+==10642==      possibly lost: 0 bytes in 0 blocks
+==10642==    still reachable: 8,976 bytes in 34 blocks
+==10642==         suppressed: 0 bytes in 0 blocks
+==10642== Rerun with --leak-check=full to see details of leaked memory
+==10642== 
+==10642== For counts of detected and suppressed errors, rerun with: -v
+==10642== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Resultados viajante: nperm=125000 min=10.996494 primer_rand=921827429
+0 8 23 5 25 15 26 4 29 2 32 10 30 27 20 21 3 13 16 11 28 17 14 22 9 6 19 24 7 18 1 12 31 0
+Resultados viajante: nperm=125000 min=11.937170 primer_rand=620072809
+0 9 15 16 13 26 8 31 12 10 32 18 30 28 20 29 1 24 7 6 14 21 11 27 25 17 5 19 23 2 4 3 22 0
+==10645== 
+==10645== HEAP SUMMARY:
+==10645==     in use at exit: 8,976 bytes in 34 blocks
+==10645==   total heap usage: 42 allocs, 8 frees, 10,336 bytes allocated
+==10645== 
+==10645== LEAK SUMMARY:
+==10645==    definitely lost: 0 bytes in 0 blocks
+==10645==    indirectly lost: 0 bytes in 0 blocks
+==10645==      possibly lost: 0 bytes in 0 blocks
+==10645==    still reachable: 8,976 bytes in 34 blocks
+==10645==         suppressed: 0 bytes in 0 blocks
+==10645== Rerun with --leak-check=full to see details of leaked memory
+==10645== 
+==10645== For counts of detected and suppressed errors, rerun with: -v
+==10645== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Resultados viajante: nperm=125000 min=10.978105 primer_rand=927797456
+0 5 23 20 32 30 12 31 25 27 10 8 28 24 9 21 11 16 1 22 15 2 29 4 14 6 7 18 19 17 3 26 13 0
+==10644== 
+==10644== HEAP SUMMARY:
+==10644==     in use at exit: 8,976 bytes in 34 blocks
+==10644==   total heap usage: 42 allocs, 8 frees, 10,336 bytes allocated
+==10644== 
+==10644== LEAK SUMMARY:
+==10644==    definitely lost: 0 bytes in 0 blocks
+==10644==    indirectly lost: 0 bytes in 0 blocks
+==10644==      possibly lost: 0 bytes in 0 blocks
+==10644==    still reachable: 8,976 bytes in 34 blocks
+==10644==         suppressed: 0 bytes in 0 blocks
+==10644== Rerun with --leak-check=full to see details of leaked memory
+==10644== 
+==10644== For counts of detected and suppressed errors, rerun with: -v
+==10644== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==10646== 
+==10646== HEAP SUMMARY:
+==10646==     in use at exit: 8,976 bytes in 34 blocks
+==10646==   total heap usage: 42 allocs, 8 frees, 10,336 bytes allocated
+==10646== 
+==10646== LEAK SUMMARY:
+==10646==    definitely lost: 0 bytes in 0 blocks
+==10646==    indirectly lost: 0 bytes in 0 blocks
+==10646==      possibly lost: 0 bytes in 0 blocks
+==10646==    still reachable: 8,976 bytes in 34 blocks
+==10646==         suppressed: 0 bytes in 0 blocks
+==10646== Rerun with --leak-check=full to see details of leaked memory
+==10646== 
+==10646== For counts of detected and suppressed errors, rerun with: -v
+==10646== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==10647== 
+==10647== HEAP SUMMARY:
+==10647==     in use at exit: 8,976 bytes in 34 blocks
+==10647==   total heap usage: 42 allocs, 8 frees, 10,336 bytes allocated
+==10647== 
+==10647== LEAK SUMMARY:
+==10647==    definitely lost: 0 bytes in 0 blocks
+==10647==    indirectly lost: 0 bytes in 0 blocks
+==10647==      possibly lost: 0 bytes in 0 blocks
+==10647==    still reachable: 8,976 bytes in 34 blocks
+==10647==         suppressed: 0 bytes in 0 blocks
+==10647== Rerun with --leak-check=full to see details of leaked memory
+==10647== 
+==10647== For counts of detected and suppressed errors, rerun with: -v
+==10647== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==10649== 
+==10649== HEAP SUMMARY:
+==10649==     in use at exit: 8,976 bytes in 34 blocks
+==10649==   total heap usage: 42 allocs, 8 frees, 10,336 bytes allocated
+==10649== 
+==10649== LEAK SUMMARY:
+==10649==    definitely lost: 0 bytes in 0 blocks
+==10649==    indirectly lost: 0 bytes in 0 blocks
+==10649==      possibly lost: 0 bytes in 0 blocks
+==10649==    still reachable: 8,976 bytes in 34 blocks
+==10649==         suppressed: 0 bytes in 0 blocks
+==10649== Rerun with --leak-check=full to see details of leaked memory
+==10649== 
+==10649== For counts of detected and suppressed errors, rerun with: -v
+==10649== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==10643== 
+==10643== HEAP SUMMARY:
+==10643==     in use at exit: 8,976 bytes in 34 blocks
+==10643==   total heap usage: 42 allocs, 8 frees, 10,336 bytes allocated
+==10643== 
+==10643== LEAK SUMMARY:
+==10643==    definitely lost: 0 bytes in 0 blocks
+==10643==    indirectly lost: 0 bytes in 0 blocks
+==10643==      possibly lost: 0 bytes in 0 blocks
+==10643==    still reachable: 8,976 bytes in 34 blocks
+==10643==         suppressed: 0 bytes in 0 blocks
+==10643== Rerun with --leak-check=full to see details of leaked memory
+==10643== 
+==10643== For counts of detected and suppressed errors, rerun with: -v
+==10643== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Resultado final: Tiempo=9521 speedup=1.833946 distancia minima=10.650661
+0 9 7 8 25 16 13 31 6 22 18 4 15 29 20 21 1 3 26 14 2 28 24 11 23 5 10 32 30 12 27 17 19 0
+Test 2 aprobado: speedup >= 1.7x
+
+Felicitaciones: su tarea funciona
+==10604== 
+==10604== HEAP SUMMARY:
+==10604==     in use at exit: 0 bytes in 0 blocks
+==10604==   total heap usage: 42 allocs, 42 frees, 10,336 bytes allocated
+==10604== 
+==10604== All heap blocks were freed -- no leaks are possible
+==10604== 
+==10604== For counts of detected and suppressed errors, rerun with: -v
+==10604== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
