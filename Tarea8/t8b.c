@@ -7,20 +7,41 @@
 #include <float.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <signal.h>
+#include <setjmp.h>
 
 #include "viajante.h"
 
+/* Esta metodología podría no ser correcta porque se puede ingresar Control-C
+en el momento en que el programa está copiando el arreglo z correspondiente,
+o incluso no alcanzó a llegar a ese punto, y por lo tanto, al gatillarse la señal,
+se vuelve al punto de retorno para longjmp, entregando el mínimo calculado
+hasta el momento, pero el arreglo z pudiendo ser incorrecto ya que no se había
+terminado de copiar (o ni siquiera empezó a hacerlo) */
+
+static jmp_buf ring;
+
+void end() {
+  longjmp(ring, 1);
+}
+
 double viajante(int z[], int n, double **m, int nperm) {
-  double min= DBL_MAX; // la distancia mas corta hasta el momento
-  for (int i= 1; i<=nperm; i++) {
-    int x[n+1];          // almacenara una ruta aleatoria
-    gen_ruta_alea(x, n); // genera ruta x[0]=0, x[1], x[2], ..., x[n], x[0]=0
-    // calcula la distancia al recorrer 0, x[1], ..., x[n], 0
-    double d= dist(x, n, m);
-    if (d<min) {    // si distancia es menor a la mas corta hasta el momento
-      min= d;       // d es la nueva distancia mas corta
-      for (int j= 0; j<=n; j++)
-        z[j]= x[j]; // guarda ruta mas corta en parametro z
-  } }
+  double min = DBL_MAX;
+  void (*handler)() = signal(SIGINT, end);
+
+  if (setjmp(ring) == 0) { // try
+    for (int i = 1; i <= nperm; i++) {
+    int x[n + 1];
+    gen_ruta_alea(x, n);
+    double d = dist(x, n, m);
+    if (d < min) {
+      min = d;
+      for (int j = 0; j <= n; j++)
+        z[j] = x[j];
+      } 
+    }
+  } else { // catch
+  }
+  signal(SIGINT, handler);
   return min;
 }
