@@ -40,8 +40,11 @@ double viajante(int z[], int n, double **m, int nperm) {
         z[j] = x[j];
       } 
     }
-  } else { // catch
   }
+  else { // catch
+  
+  }
+
   signal(SIGINT, handler);
   return min;
 }

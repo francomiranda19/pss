@@ -23,10 +23,6 @@ double viajante(int z[], int n, double **m, int nperm) {
   void (*handler)() = signal(SIGINT, ring);
   flag = 1;
 
-  if (!flag) {
-    return min;
-  }
-
   for (int i = 1; i <= nperm && flag; i++) {
     int x[n + 1];
     gen_ruta_alea(x, n);
